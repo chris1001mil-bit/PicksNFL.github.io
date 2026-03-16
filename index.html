@@ -524,16 +524,16 @@ async function ponerEquiposReales() {
       imgVis.width = 64;
       visDiv.appendChild(imgVis);
     }
-    imgVis.src = visitante.team.logo;
+    imgVis.src = visitante.team.abbreviation + ".png";
 
-    let imgLoc = locDiv.querySelector("img");
-    if (!imgLoc) {
-      imgLoc = document.createElement("img");
-      imgLoc.className = "logo";
-      imgLoc.width = 64;
-      locDiv.appendChild(imgLoc);
-    }
-    imgLoc.src = local.team.logo;
+let imgLoc = locDiv.querySelector("img");
+if (!imgLoc) {
+  imgLoc = document.createElement("img");
+  imgLoc.className = "logo";
+  imgLoc.width = 64;
+  locDiv.appendChild(imgLoc);
+}
+imgLoc.src = local.team.abbreviation + ".png";
 
     // ─── Actualizar marcador y estado ───
     const scoreVis = Number(visitante.score) || 0;
